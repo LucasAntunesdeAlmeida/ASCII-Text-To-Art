@@ -211,6 +211,6 @@ def writer(opc, line):
     }
 
     if ( opc < 26 ):
-        print(options[opc][line])
+        print(options[opc][line], end="")
     else:
-        print("Argumento invalido")
+        print("    ", end="")
