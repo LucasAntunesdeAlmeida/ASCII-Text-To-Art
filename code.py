@@ -1,11 +1,14 @@
+import os
 from writer import writer
 
 def transcriber():
-    Text = input("Input Text:")
+    Text = input(" Input Text: ")
     aux = 2;
 
+    print()
     #controls the height
     for i in range(6):
+        print(" ", end="")
         #controls the selected element
         for j in range(len(Text)):
 
@@ -67,6 +70,24 @@ def transcriber():
         print()
 
 def main():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+    print('                                                                      ')
+    print(' ████████╗███████╗██╗  ██╗████████╗     █████╗ ███████╗ ██████╗██╗██╗ ')
+    print(' ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝    ██╔══██╗██╔════╝██╔════╝██║██║ ')
+    print('    ██║   █████╗   ╚███╔╝    ██║       ███████║███████╗██║     ██║██║ ')
+    print('    ██║   ██╔══╝   ██╔██╗    ██║       ██╔══██║╚════██║██║     ██║██║ ')
+    print('    ██║   ███████╗██╔╝ ██╗   ██║       ██║  ██║███████║╚██████╗██║██║ ')
+    print('                                                                      ')
+    print(' ████████╗ ██████╗      █████╗ ██████╗ ████████╗                      ')
+    print(' ╚══██╔══╝██╔═══██╗    ██╔══██╗██╔══██╗╚══██╔══╝                      ')
+    print('    ██║   ██║   ██║    ███████║██████╔╝   ██║                         ')
+    print('    ██║   ██║   ██║    ██╔══██║██╔══██╗   ██║                         ')
+    print('    ██║   ╚██████╔╝    ██║  ██║██║  ██║   ██║                         ')
+    print('    ╚═╝    ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝                         ')
+    print(' By: Lucas Antunes de Almeida                                         ')
+    print('                                                                      ')
+
     transcriber()
 
 if __name__ == '__main__':
