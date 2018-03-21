@@ -1,5 +1,5 @@
 import os
-import writer
+from writer import writer
 
 def transcriber():
     Text = input(" Input Text: ")
