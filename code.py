@@ -1,7 +1,11 @@
 import os
 from writer import writer
 
+def cleantext():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 def transcriber():
+    cleantext()
     Text = input(" Input Text: ")
     Text = Text.lower()
 
@@ -54,26 +58,84 @@ def transcriber():
             writer(characters[Text[j]], i)
         print()
 
+def character(lim1, lim2):
+    for i in range(6):
+        print(" ", end="")
+        for j in range(lim1, lim2):
+            writer(j, i)
+            writer(26, i)
+        print()
+    print()
+
+def allcharactersinline():
+    cleantext()
+
+    print("\n All characters supported:\n")
+
+    #supported letters
+    character(0, 9)
+    character(9, 18)
+    character(18, 26)
+
+    #supported numbers
+    character(27,37)
+
+    input("Press any key to continue")
+    menu()
+
+def allcharactersincolumn():
+    cleantext()
+
+    print("\n All characters supported:\n")
+
+    #allcharacters
+    for i in range(0, 37):
+        character(i, i+1)
+
+    input("Press any key to continue")
+    menu()
+
+def logo():
+        cleantext()
+
+        print('                                                                      ')
+        print('  █████╗ ███████╗ ██████╗██╗██╗    ████████╗███████╗██╗  ██╗████████╗ ')
+        print(' ██╔══██╗██╔════╝██╔════╝██║██║    ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝ ')
+        print(' ███████║███████╗██║     ██║██║       ██║   █████╗   ╚███╔╝    ██║    ')
+        print(' ██╔══██║╚════██║██║     ██║██║       ██║   ██╔══╝   ██╔██╗    ██║    ')
+        print(' ██║  ██║███████║╚██████╗██║██║       ██║   ███████╗██╔╝ ██╗   ██║    ')
+        print(' ╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝╚═╝       ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝    ')
+        print(' ████████╗ ██████╗      █████╗ ██████╗ ████████╗                      ')
+        print(' ╚══██╔══╝██╔═══██╗    ██╔══██╗██╔══██╗╚══██╔══╝                      ')
+        print('    ██║   ██║   ██║    ███████║██████╔╝   ██║                         ')
+        print('    ██║   ██║   ██║    ██╔══██║██╔══██╗   ██║                         ')
+        print('    ██║   ╚██████╔╝    ██║  ██║██║  ██║   ██║                         ')
+        print('    ╚═╝    ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝                         ')
+        print(' By: Lucas Antunes de Almeida                                         ')
+        print('                                                                      ')
+
+def menu():
+    logo()
+    options = {
+        0 : transcriber,
+        1 : allcharactersinline,
+        2 : allcharactersincolumn,
+        3 : exit,
+    }
+
+    print(" [0] ASCII text converter for art")
+    print(" [1] Display all characters supported in line")
+    print(" [2] Display all characters supported in column")
+    print(" [3] Exit")
+
+    opc = int(input(" Selected option:"))
+
+    if(opc >= 0 and opc < 4):
+        options[opc]()
+
+
 def main():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-    print('                                                                      ')
-    print('  █████╗ ███████╗ ██████╗██╗██╗    ████████╗███████╗██╗  ██╗████████╗ ')
-    print(' ██╔══██╗██╔════╝██╔════╝██║██║    ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝ ')
-    print(' ███████║███████╗██║     ██║██║       ██║   █████╗   ╚███╔╝    ██║    ')
-    print(' ██╔══██║╚════██║██║     ██║██║       ██║   ██╔══╝   ██╔██╗    ██║    ')
-    print(' ██║  ██║███████║╚██████╗██║██║       ██║   ███████╗██╔╝ ██╗   ██║    ')
-    print(' ╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝╚═╝       ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝    ')
-    print(' ████████╗ ██████╗      █████╗ ██████╗ ████████╗                      ')
-    print(' ╚══██╔══╝██╔═══██╗    ██╔══██╗██╔══██╗╚══██╔══╝                      ')
-    print('    ██║   ██║   ██║    ███████║██████╔╝   ██║                         ')
-    print('    ██║   ██║   ██║    ██╔══██║██╔══██╗   ██║                         ')
-    print('    ██║   ╚██████╔╝    ██║  ██║██║  ██║   ██║                         ')
-    print('    ╚═╝    ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝                         ')
-    print(' By: Lucas Antunes de Almeida                                         ')
-    print('                                                                      ')
-
-    transcriber()
+    menu()
 
 if __name__ == '__main__':
     main()
