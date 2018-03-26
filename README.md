@@ -12,3 +12,6 @@
     ██║   ╚██████╔╝    ██║  ██║██║  ██║   ██║                         
     ╚═╝    ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝                           
   ```
+# <a name="introduction"></a>Introduction<br>
+  This program has been developed with the purpose of converting texts in ASCII to something beautiful to see.
+<br>
