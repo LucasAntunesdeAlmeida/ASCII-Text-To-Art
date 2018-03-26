@@ -48,6 +48,20 @@ def transcriber():
         "8" : 34,
         "9" : 35,
         "0" : 36,
+        "!" : 37,
+        "@" : 38,
+        "#" : 39,
+        "$" : 40,
+        "%" : 41,
+        "&" : 42,
+        "*" : 43,
+        "(" : 44,
+        ")" : 45,
+        "-" : 46,
+        "_" : 47,
+        "." : 48,
+        "," : 49,
+        ":" : 50,
     }
 
     #controls the height
@@ -80,6 +94,9 @@ def allcharactersinline():
     #supported numbers
     character(27,37)
 
+    #supported special characters
+    character(38,51)
+
     input("Press any key to continue")
     menu()
 
@@ -89,7 +106,7 @@ def allcharactersincolumn():
     print("\n All characters supported:\n")
 
     #allcharacters
-    for i in range(0, 37):
+    for i in range(0, 51):
         character(i, i+1)
 
     input("Press any key to continue")
@@ -128,7 +145,7 @@ def menu():
     print(" [2] Display all characters supported in column")
     print(" [3] Exit")
 
-    opc = int(input(" Selected option:"))
+    opc = int(input(" Selected option: "))
 
     if(opc >= 0 and opc < 4):
         options[opc]()
