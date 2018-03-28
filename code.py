@@ -60,23 +60,39 @@ def charactersmap(text):
     }
     return characters[text];
 
-def transcriber(Text):
-    print()
-
+def transcriber(Text, mode):
     #controls the height
     for i in range(6):
-        print(" ", end="")
+        print(mode, end="")
         #controls the selected element
         for j in range(len(Text)):
             writer(charactersmap(Text[j]), i)
         print()
+
+def means():
+    print(" Do you want a conversion in the form of a comment?")
+    opc = input(" Y or N: ").lower()
+
+    if(opc == "y"):
+        print(" Enter the symbols ")
+        print(" Example: for a comment in python enter #")
+        mode = input(" Symbols: ")
+    else:
+        mode = " "
+
+    if(mode != " "):
+        mode = " " + mode + " "
+
+    print()
+    
+    return mode
 
 def transcriberinline():
     cleantext()
     Text = input(" Input Text: ")
     Text = Text.lower()
 
-    transcriber(Text)
+    transcriber(Text, means())
 
 def transcriberinmultiple():
     cleantext()
@@ -88,8 +104,10 @@ def transcriberinmultiple():
         print(" Input Text[", i, "]: ", end="")
         Text.append(input().lower())
 
+    mode = means()
+
     for i in range(lines):
-        transcriber(Text[i])
+        transcriber(Text[i], mode)
 
 def character(lim1, lim2):
     for i in range(6):
