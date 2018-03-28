@@ -4,12 +4,7 @@ from writer import writer
 def cleantext():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def transcriber():
-    cleantext()
-    Text = input(" Input Text: ")
-    Text = Text.lower()
-
-    print()
+def charactersmap(text):
     characters = {
         "a" : 0,
         "b" : 1,
@@ -63,14 +58,38 @@ def transcriber():
         "," : 49,
         ":" : 50,
     }
+    return characters[text];
+
+def transcriber(Text):
+    print()
 
     #controls the height
     for i in range(6):
         print(" ", end="")
         #controls the selected element
         for j in range(len(Text)):
-            writer(characters[Text[j]], i)
+            writer(charactersmap(Text[j]), i)
         print()
+
+def transcriberinline():
+    cleantext()
+    Text = input(" Input Text: ")
+    Text = Text.lower()
+
+    transcriber(Text)
+
+def transcriberinmultiple():
+    cleantext()
+    lines = int(input(" Number of lines: "))
+
+    Text = []
+
+    for i in range(lines):
+        print(" Input Text[", i, "]: ", end="")
+        Text.append(input().lower())
+
+    for i in range(lines):
+        transcriber(Text[i])
 
 def character(lim1, lim2):
     for i in range(6):
@@ -97,7 +116,7 @@ def allcharactersinline():
     #supported special characters
     character(38,51)
 
-    input("Press any key to continue")
+    input("Press ENTER key to continue")
     menu()
 
 def allcharactersincolumn():
@@ -109,7 +128,7 @@ def allcharactersincolumn():
     for i in range(0, 51):
         character(i, i+1)
 
-    input("Press any key to continue")
+    input("Press ENTER key to continue")
     menu()
 
 def logo():
@@ -134,20 +153,22 @@ def logo():
 def menu():
     logo()
     options = {
-        0 : transcriber,
-        1 : allcharactersinline,
-        2 : allcharactersincolumn,
-        3 : exit,
+        0 : transcriberinline,
+        1 : transcriberinmultiple,
+        2 : allcharactersinline,
+        3 : allcharactersincolumn,
+        4 : exit,
     }
 
-    print(" [0] ASCII text converter for art")
-    print(" [1] Display all characters supported in line")
-    print(" [2] Display all characters supported in column")
-    print(" [3] Exit")
+    print(" [0] ASCII text converter for art in line")
+    print(" [1] ASCII text converter for art in multiple lines")
+    print(" [2] Display all characters supported in line")
+    print(" [3] Display all characters supported in column")
+    print(" [4] Exit")
 
     opc = int(input(" Selected option: "))
 
-    if(opc >= 0 and opc < 4):
+    if(opc >= 0 and opc < 5):
         options[opc]()
 
 
