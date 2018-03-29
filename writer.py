@@ -51,6 +51,7 @@ def charactersmap(text):
         "." : 48,
         "," : 49,
         ":" : 50,
+        "?" : 51,
     }
 
     if text in characters:
@@ -419,6 +420,14 @@ def writer(opc, line):
              '╚═╝',
              '   ']
 
+    sim15 = ['██████╗ ',
+             '╚════██╗',
+             '  ▄███╔╝',
+             '  ▀▀══╝ ',
+             '  ██╗   ',
+             '  ╚═╝   ']
+
+
     options = {
         0 : A,
         1 : B,
@@ -471,6 +480,7 @@ def writer(opc, line):
         48 : sim12,
         49 : sim13,
         50 : sim14,
+        51 : sim15,
     }
 
     if opc in options:

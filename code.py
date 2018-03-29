@@ -5,6 +5,7 @@ def cleantext():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def waitaction():
+    print()
     input("Press ENTER to return to the menu")
     menu()
 
@@ -88,7 +89,7 @@ def allcharactersinline():
     character(27,37)
 
     #supported special characters
-    character(38,51)
+    character(38,52)
 
     waitaction()
 
@@ -98,7 +99,7 @@ def allcharactersincolumn():
     print("\n All characters supported:\n")
 
     #allcharacters
-    for i in range(0, 51):
+    for i in range(0, 52):
         character(i, i+1)
 
     waitaction()
