@@ -4,6 +4,10 @@ from writer import writer, charactersmap
 def cleantext():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+def waitaction():
+    input("Press ENTER to return to the menu")
+    menu()
+
 def transcriber(Text, mode):
     #controls the height
     for i in range(6):
@@ -38,6 +42,8 @@ def transcriberinline():
 
     transcriber(Text, means())
 
+    waitaction()
+
 def transcriberinmultiple():
     cleantext()
     #lines = int(input(" Number of lines: "))
@@ -56,6 +62,8 @@ def transcriberinmultiple():
 
     for i in range(cont):
         transcriber(Text[i], mode)
+
+    waitaction()
 
 def character(lim1, lim2):
     for i in range(6):
@@ -82,8 +90,7 @@ def allcharactersinline():
     #supported special characters
     character(38,51)
 
-    input("Press ENTER key to continue")
-    menu()
+    waitaction()
 
 def allcharactersincolumn():
     cleantext()
@@ -94,8 +101,7 @@ def allcharactersincolumn():
     for i in range(0, 51):
         character(i, i+1)
 
-    input("Press ENTER key to continue")
-    menu()
+    waitaction()
 
 def logo():
         cleantext()
@@ -125,7 +131,8 @@ def menu():
 
     if opc in options:
         options[opc]()
-
+    else:
+        menu()
 
 def main():
     menu()
