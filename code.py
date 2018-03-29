@@ -58,7 +58,11 @@ def charactersmap(text):
         "," : 49,
         ":" : 50,
     }
-    return characters[text];
+
+    if text in characters:
+        return characters[text]
+    else:
+        return 26
 
 def transcriber(Text, mode):
     #controls the height
@@ -84,7 +88,7 @@ def means():
         mode = " " + mode + " "
 
     print()
-    
+
     return mode
 
 def transcriberinline():
@@ -151,31 +155,20 @@ def allcharactersincolumn():
 
 def logo():
         cleantext()
-
-        print('                                                                      ')
-        print('  █████╗ ███████╗ ██████╗██╗██╗    ████████╗███████╗██╗  ██╗████████╗ ')
-        print(' ██╔══██╗██╔════╝██╔════╝██║██║    ╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝ ')
-        print(' ███████║███████╗██║     ██║██║       ██║   █████╗   ╚███╔╝    ██║    ')
-        print(' ██╔══██║╚════██║██║     ██║██║       ██║   ██╔══╝   ██╔██╗    ██║    ')
-        print(' ██║  ██║███████║╚██████╗██║██║       ██║   ███████╗██╔╝ ██╗   ██║    ')
-        print(' ╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝╚═╝       ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝    ')
-        print(' ████████╗ ██████╗      █████╗ ██████╗ ████████╗                      ')
-        print(' ╚══██╔══╝██╔═══██╗    ██╔══██╗██╔══██╗╚══██╔══╝                      ')
-        print('    ██║   ██║   ██║    ███████║██████╔╝   ██║                         ')
-        print('    ██║   ██║   ██║    ██╔══██║██╔══██╗   ██║                         ')
-        print('    ██║   ╚██████╔╝    ██║  ██║██║  ██║   ██║                         ')
-        print('    ╚═╝    ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝                         ')
-        print(' By: Lucas Antunes de Almeida                                         ')
-        print('                                                                      ')
+        print()
+        transcriber("ascii text", " ")
+        transcriber("to art", " ")
+        print(" By: Lucas Antunes de Almeida ")
+        print()
 
 def menu():
     logo()
     options = {
-        0 : transcriberinline,
-        1 : transcriberinmultiple,
-        2 : allcharactersinline,
-        3 : allcharactersincolumn,
-        4 : exit,
+        '0' : transcriberinline,
+        '1' : transcriberinmultiple,
+        '2' : allcharactersinline,
+        '3' : allcharactersincolumn,
+        '4' : exit,
     }
 
     print(" [0] ASCII text converter for art in line")
@@ -184,9 +177,9 @@ def menu():
     print(" [3] Display all characters supported in column")
     print(" [4] Exit")
 
-    opc = int(input(" Selected option: "))
+    opc = input(" Selected option: ")
 
-    if(opc >= 0 and opc < 5):
+    if opc in options:
         options[opc]()
 
 
