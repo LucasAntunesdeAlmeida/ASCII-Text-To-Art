@@ -1,68 +1,8 @@
 import os
-from writer import writer
+from writer import writer, charactersmap
 
 def cleantext():
     os.system('cls' if os.name == 'nt' else 'clear')
-
-def charactersmap(text):
-    characters = {
-        "a" : 0,
-        "b" : 1,
-        "c" : 2,
-        "d" : 3,
-        "e" : 4,
-        "f" : 5,
-        "g" : 6,
-        "h" : 7,
-        "i" : 8,
-        "j" : 9,
-        "k" : 10,
-        "l" : 11,
-        "m" : 12,
-        "n" : 13,
-        "o" : 14,
-        "p" : 15,
-        "q" : 16,
-        "r" : 17,
-        "s" : 18,
-        "t" : 19,
-        "u" : 20,
-        "v" : 21,
-        "w" : 22,
-        "x" : 23,
-        "y" : 24,
-        "z" : 25,
-        " " : 26,
-        "1" : 27,
-        "2" : 28,
-        "3" : 29,
-        "4" : 30,
-        "5" : 31,
-        "6" : 32,
-        "7" : 33,
-        "8" : 34,
-        "9" : 35,
-        "0" : 36,
-        "!" : 37,
-        "@" : 38,
-        "#" : 39,
-        "$" : 40,
-        "%" : 41,
-        "&" : 42,
-        "*" : 43,
-        "(" : 44,
-        ")" : 45,
-        "-" : 46,
-        "_" : 47,
-        "." : 48,
-        "," : 49,
-        ":" : 50,
-    }
-
-    if text in characters:
-        return characters[text]
-    else:
-        return 26
 
 def transcriber(Text, mode):
     #controls the height
