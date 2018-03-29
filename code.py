@@ -40,17 +40,21 @@ def transcriberinline():
 
 def transcriberinmultiple():
     cleantext()
-    lines = int(input(" Number of lines: "))
+    #lines = int(input(" Number of lines: "))
 
     Text = []
 
-    for i in range(lines):
-        print(" Input Text[", i, "]: ", end="")
+    cont = 0
+    while(1):
+        print(" Press ENTER to continue or enter part[", cont, "] of the text: ", end="")
         Text.append(input().lower())
+        if(Text[cont] == ''):
+            break
+        cont = cont + 1
 
     mode = means()
 
-    for i in range(lines):
+    for i in range(cont):
         transcriber(Text[i], mode)
 
 def character(lim1, lim2):
