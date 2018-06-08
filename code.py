@@ -2,7 +2,7 @@ import os
 from writer import writer, charactersmap
 
 def cleantext():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("clear && printf '\e[3J'" if os.name == 'nt' else "clear && printf '\e[3J'")
 
 def waitaction():
     print()
@@ -112,6 +112,10 @@ def logo():
         print(" By: Lucas Antunes de Almeida ")
         print()
 
+def exitprogram():
+    cleantext()
+    exit()
+
 def menu():
     logo()
     options = {
@@ -119,7 +123,7 @@ def menu():
         '1' : transcriberinmultiple,
         '2' : allcharactersinline,
         '3' : allcharactersincolumn,
-        '4' : exit,
+        '4' : exitprogram,
     }
 
     print(" [0] ASCII text converter for art in line")
