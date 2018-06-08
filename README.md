@@ -13,7 +13,7 @@
     ╚═╝    ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝                           
   ```
 
-# Sumário
+# Summary
 * [Introduction](#introduction)<br>
 * [Execute](#Execute)<br>
 * [Supported Characters](#SupportedChacareters)<br>
