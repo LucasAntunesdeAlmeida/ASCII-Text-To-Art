@@ -15,20 +15,30 @@
 
 # Summary
 * [Introduction](#introduction)<br>
-* [Execute](#Execute)<br>
-* [Supported Characters](#SupportedChacareters)<br>
+* [Demo Execute](#Execute)<br>
+* [To Include and Use](#Include)<br>
+* [Characters supported with default font](#SupportedChacareters)<br>
 
 # <a name="introduction"></a>Introduction<br>
   This program has been developed with the purpose of converting texts in ASCII to something beautiful to see.
 </br>
 
-# <a name="Execute"></a>Execute<br>
+# <a name="Execute"></a>Demo Execute<br>
 To run the program use: </br>
 	```
-	$ python3 code.py
+	$ python3 demo.py
 	```
 
-# <a name="SupportedChacareters"></a>Supported Characters</br>
+# <a name="Include"></a>To Include and Use<br>
+```python3
+import ASCIITextToArt
+	
+art = ASCIITextToArt.ASCIITextToArt()
+art.printText("Text Here")
+```
+
+
+# <a name="SupportedChacareters"></a>Characters Supported With Default Font</br>
 
 ```
   █████╗     ██████╗      ██████╗    ██████╗     ███████╗    ███████╗     ██████╗     ██╗  ██╗    ██╗    
