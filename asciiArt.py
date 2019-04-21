@@ -56,4 +56,6 @@ class asciiArt:
 
 if __name__ == "__main__":
     art = asciiArt()
-    art.printText("ASCIIART")
+    art.printText(" ASCII-Text")
+    art.printText("    To-Art")
+    print("     by:Lucas Antunes de Almeida")
