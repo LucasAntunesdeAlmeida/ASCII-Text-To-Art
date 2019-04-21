@@ -17,7 +17,7 @@
 * [Introduction](#introduction)<br>
 * [Demo Execute](#Execute)<br>
 * [To Include and Use](#Include)<br>
-* [Characters supported with default font](#SupportedChacareters)<br>
+* [Characters Supported With Default Font](#SupportedChacareters)<br>
 
 # <a name="introduction"></a>Introduction<br>
   This program has been developed with the purpose of converting texts in ASCII to something beautiful to see.
