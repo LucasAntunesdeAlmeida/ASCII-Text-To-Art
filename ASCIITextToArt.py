@@ -1,4 +1,4 @@
-class asciiArt:
+class ASCIITextToArt:
     def __init__(self):
         self.settings = {}
         self.font = {}
@@ -55,7 +55,7 @@ class asciiArt:
 
 
 if __name__ == "__main__":
-    art = asciiArt()
-    art.printText(" ASCII-Text")
-    art.printText("    To-Art")
+    art = ASCIITextToArt()
+    art.printText(" ASCII Text")
+    art.printText("   To Art")
     print("     by:Lucas Antunes de Almeida")
