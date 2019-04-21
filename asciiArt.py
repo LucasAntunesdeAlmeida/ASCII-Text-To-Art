@@ -18,10 +18,17 @@ class asciiArt:
             'part' : self.addPart,
         }
 
-        for i in range(lenFile):
-            line = ref_archive.readline()
-            line = line.split("<>")
-            options[line[0]](line)
+        if(self.settings['lowercase'] == 0):
+            for i in range(lenFile):
+                line = ref_archive.readline()
+                line = line.split("<>")
+                line[1] = line[1].lower()
+                options[line[0]](line)
+        else:
+            for i in range(lenFile):
+                line = ref_archive.readline()
+                line = line.split("<>")
+                options[line[0]](line)
     
     def addSymbol(self, line):
         self.font[line[1].replace('\n', '')] = []
@@ -36,7 +43,17 @@ class asciiArt:
             print(i)
             for j in range(self.settings['height']):
                 print(self.font[i][j])
+    
+    def printText(self, text):
+        if(self.settings['lowercase'] == 0):
+            text = text.lower()
+
+        for i in range(self.settings['height']):
+            for letter in text:
+                print(self.font[letter][i], end="")
+            print()
+
 
 if __name__ == "__main__":
     art = asciiArt()
-    art.showFont()
+    art.printText("ASCIIART")
