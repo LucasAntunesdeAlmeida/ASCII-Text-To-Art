@@ -26,7 +26,7 @@
 # <a name="Execute"></a>Demo Execute<br>
 To run the demo use: </br>
 	```
-	$ python3 demoMenu.py
+	$ python3 _demos/demoMenu.py
 	```
 
 # <a name="Include"></a>To Include and Use<br>
