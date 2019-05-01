@@ -24,9 +24,9 @@
 </br>
 
 # <a name="Execute"></a>Demo Execute<br>
-To run the program use: </br>
+To run the demo use: </br>
 	```
-	$ python3 demo.py
+	$ python3 demoMenu.py
 	```
 
 # <a name="Include"></a>To Include and Use<br>
