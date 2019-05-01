@@ -2,7 +2,7 @@ class ASCIITextToArt:
     def __init__(self):
         self.settings = {}
         self.font = {}
-        self.setFont("fonts/default.txt")
+        self.setFont("_fonts/default.txt")
 
     def setFont(self, file):
         ref_archive = open(file, "r")
