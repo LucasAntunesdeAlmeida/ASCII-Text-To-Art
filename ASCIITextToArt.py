@@ -43,19 +43,33 @@ class ASCIITextToArt:
             print(i)
             for j in range(self.settings['height']):
                 print(self.font[i][j])
-    
-    def printText(self, text):
+
+    def getText(self, text):
+        art = ''
+
         if(self.settings['lowercase'] == 0):
             text = text.lower()
 
         for i in range(self.settings['height']):
             for letter in text:
-                print(self.font[letter][i], end="")
-            print()
+                art += self.font[letter][i]
+            art += '\n'
+        
+        return art
 
+    def getList(self, text):
+        return self.getText(text).split('\n')
+
+    def getMatrix(self, text):
+        art = [[i] for i in self.getList(text)]
+        art.pop()
+        return art 
+
+    def printText(self, text):
+        print(self.getText(text))
 
 if __name__ == "__main__":
     art = ASCIITextToArt()
-    art.printText(" ASCII Text")
-    art.printText("   To Art")
-    print("     by:Lucas Antunes de Almeida")
+    art.printText("ASCII Text")
+    art.printText("To Art")
+    print("by:Lucas Antunes de Almeida")
