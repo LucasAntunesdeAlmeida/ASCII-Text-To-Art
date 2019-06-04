@@ -12,10 +12,11 @@
     ██║   ╚██████╔╝    ██║  ██║██║  ██║   ██║                         
     ╚═╝    ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝                           
   ```
+![Python Version](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg)
+![License](https://img.shields.io/badge/license-mit-green.svg)
 
 # Summary
 * [Introduction](#introduction)<br>
-* [Demo Execute](#Execute)<br>
 * [To Include and Use](#Include)<br>
 * [Characters Supported With Default Font](#SupportedChacareters)<br>
 
@@ -23,18 +24,15 @@
   This program has been developed with the purpose of converting texts in ASCII to something beautiful to see.
 </br>
 
-# <a name="Execute"></a>Demo Execute<br>
-To run the demo use: </br>
-	```
-	$ python3 demoMenu.py
-	```
-
 # <a name="Include"></a>To Include and Use<br>
 ```python3
 import ASCIITextToArt
 	
 art = ASCIITextToArt.ASCIITextToArt()
-art.printText("Text Here")
+art.printText('Text Here')
+list = art.getList('Text Here')
+matrix = art.getMatrix('Text Here')
+text = art.getText('Text Here')
 ```
 
 
