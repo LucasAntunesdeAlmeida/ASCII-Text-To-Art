@@ -105,6 +105,6 @@ class ASCIITextToArt:
 
 if __name__ == "__main__":
     art = ASCIITextToArt()
-    art.printText("ASCII Text", style='bold lightMagenta')
-    art.printText("To Art", style='lightMagenta')
-    print("by:Lucas Antunes de Almeida")
+    art.printText("ASCII Text", style='lightGray')
+    art.printText("To Art", style='lightGray')
+    print(art.getStyle('lightGray')+"by:Lucas Antunes de Almeida"+art.getStyle('end'))
