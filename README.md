@@ -29,10 +29,10 @@
 import ASCIITextToArt
 	
 art = ASCIITextToArt.ASCIITextToArt()
-art.printText('Text Here')
-list = art.getList('Text Here')
-matrix = art.getMatrix('Text Here')
-text = art.getText('Text Here')
+art.printText('Text Here', style'[optional] Color Here')
+artList = art.getList('Text Here', style'[optional] Color Here')
+artMatrix = art.getMatrix('Text Here', style'[optional] Color Here')
+artText = art.getText('Text Here', style'[optional] Color Here')
 ```
 
 
