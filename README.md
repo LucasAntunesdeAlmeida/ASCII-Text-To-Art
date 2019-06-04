@@ -13,7 +13,7 @@
     ╚═╝    ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝                           
   ```
 ![Python Version](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg)
-![License](https://img.shields.io/badge/license-mit-green.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 # Summary
 * [Introduction](#introduction)<br>
